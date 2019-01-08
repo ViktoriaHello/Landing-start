@@ -1,4 +1,5 @@
 @import 'decoration';
+@import 'extension';
 
 
  body {
@@ -24,11 +25,6 @@
     }
   }
 
-.container {
-    
-    padding-left: 0px ;
-    padding-right: 0px ; 
-}
 
 .navigation {
     width: 1170px;
@@ -153,9 +149,9 @@
             
  }
 
-.second-content {
-    height: 966px;
-
+ .second-content {
+    @extend %size-content;
+ 
     .h2-sec-cont {
         font-family: $font-first-content;
         font-size: 36px;
@@ -167,24 +163,17 @@
         margin-bottom: 0px; 
         }
 
-        .padding-for-span{
-           padding-top:51px;
-           padding-bottom: 90px;    
-        }
+        .padding-for-span{ @extend %padding-for-span;}
+       
         .span-sec-cont {
-            font-family: $font-logo;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 1.8;
-            text-align: center;
-            color: #737373;
+            @extend %span-content
         }
 
         .about-the-app {
             width: 358px;
             height: 391px;
             box-shadow: 0 3px 15px 5px rgb(231, 231, 231);
-            &:hover {
+             &:hover {
                 box-shadow: 0 3px 10px 10px rgb(231, 231, 231);;
                 .img-about2 {
                     display: none;
@@ -240,8 +229,6 @@
             
           }
 
-          
-
           .p-about   {
             font-family:$font-logo;
             font-size: 16px;
@@ -264,7 +251,303 @@
          .img-about1-blue {
             display: none;
          }
+        }
+    }
+.shape {
+    position: absolute;
+}
 
-         
+.third-content {
+        width: 1170px;
+        margin: 0 auto; 
+        position: relative;
+        z-index: 3;
+        padding-bottom: 290px;
+        .h2-third-cont {
+            font-family: $font-first-content;
+            font-size: 36px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: $color-logo;
+            text-align: center;
+            margin-top: 89px;
+            margin-bottom: 0px; 
+            }
+    
+            .padding-third-for-span {
+                padding-top:51px;
+                padding-bottom: 99px;    
+             }
+
+            .span-third-cont {
+                font-family: $font-logo;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.8;
+                text-align: center;
+                color: $color-logo;
+            }
+        .media {
+            padding-left: 151px;
+
+            .design1 { position: absolute;
+                padding: 21px 18px;
+                     }  
+                     
+            .design2 { position: absolute;
+                      padding-top: 19px;
+                      padding-left: 18px;
+                             }              
+
+            .design3 { position: absolute;
+                padding-left: 23px;
+                padding-top: 13px;
+                     }
+                     
+            .design4 { position: absolute;
+                 padding-top: 25px;
+                 padding-left: 18px;
+                             }             
+                }
+       
+        h5 {
+            font-family: $font-first-content;
+            font-weight: 400;
+            font-size: 20px;
+            color: $color-logo;
+            margin-bottom: 25px;
         }
+
+        .media-body {
+            margin-left: 38px;
+            margin-bottom: 53px;
+            font-family: $font-logo;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.88;
+            color: $color-logo;}
+} 
+
+.fourth-content {
+    background-color:$color-background;
+    height: 966px;}
+
+    .fourth-content-filling {
+        @extend %size-content;
+        
+        .h2-fourth-cont {
+        @extend %heading;
+    }
+    .padding-fourth-for-span { @extend %padding-for-span;}
+
+    .span-fourth-cont { @extend %span-content;}
+
+    .pricing-plan {
+        width: 366px;
+        height: 507px;
+        border: 2px solid $color-blue;
+        border-radius: 20px;
+        box-shadow: 0.7px 1.9px 5.6px 0.4px rgba(34, 31, 31, 0.24);
+    }
+    h4 {
+        font-family: $font-first-content;
+        font-size: 24px;
+        font-weight: 600;
+        color: $color-second-content;
+        text-align: center;
+        padding-top: 41px;
+        padding-bottom: 29px;
+        margin-bottom: 0px;
+    }
+    .cost {
+        font-family: $font-logo;
+        font-size: 36px;
+        font-weight: 400;
+        color: $color-button;
+        margin-bottom: 0px;
+    }
+    .span-for4 {
+        font-family:$font-logo;
+        font-size: 18px;
+        font-weight: 600;
+        color:$color-second-content;
+        padding-top: 30px;
+        padding-bottom: 33px;
+        text-align: center;
+        margin-bottom: 0px;
         }
+
+    .choice { 
+        font-family: $font-logo;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-p-about;
+        margin-bottom: 10px;
+    }    
+      
+    .list-unstyled {
+        text-align: center;
+    }    
+
+    .btn-for4 {
+        width: 205px;
+        height: 55px;
+        border: 2px solid $color-blue;
+        border-radius: 27px;
+        color: $color-blue;
+        background-color: $color-background;
+        align-items: center;
+        margin-top: 18px;
+        font-weight: 500;
+        margin-left: 77px;
+        cursor: pointer;
+    }     
+}
+    
+ .fifth-content {
+   
+
+    .h2-fifth-cont { @extend %heading; 
+    }
+    .padding-fifth-for-span { @extend %padding-for-span;}
+
+    .span-fifth-cont { @extend %span-content;} 
+ }   
+
+ .prev-next {
+     background-color: blue;
+ }
+
+.sixth-content {
+    height: 671px;
+    background-image: linear-gradient(250deg, #4085f6, #1760d7);}
+
+.sixth-content-filling {
+    @extend %size-content; 
+
+.some-talk {
+  font-family:$font-first-content;
+  font-size: 32px;
+  font-weight: 600;
+  color: $color-logo;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 90px;
+  padding-bottom: 125px;
+  margin: 0px;
+}
+.oliver {
+    width: 560px;
+    height: 277px;
+    border: 1px solid $color-logo;
+      }
+
+.rita {
+    width: 560px;
+    height: 277px;
+    border: 1px solid $color-logo;
+    margin-left: 51px;
+     }      
+}
+
+.seventh-content {
+    background-color:$color-background;
+    height: 712px;
+    margin-top: 90px;
+}
+
+    .seventh-content-filling {
+        @extend %size-content;
+        
+        .h2-seventh-cont {
+        @extend %heading;
+        padding-bottom: 10px;
+    }
+
+    .line {
+        width: 71px;
+        height: 5px;
+        background-color: #226be2;
+        margin: auto;
+      }
+  
+
+    .span-seventh-cont {
+         @extend %span-content;
+         padding-top: 23px;
+    }
+
+    .span-seventh-cont2 {
+        @extend %span-content;
+        margin-bottom: 40px; 
+   }
+   
+.loc {
+    font-family: $font-logo; 
+    font-size: 17.5px;
+    font-weight: 600;
+    color: #3b3b3b;
+ }
+
+ .location {
+    width: 379px;
+    height: 313px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    padding-top: 48px;
+    padding-left: 23px;
+    font-family: $font-logo; 
+    font-size: 15.5px;
+    font-weight: 300;
+    color: #585858;
+ }
+ .loc1 {margin-bottom: 32px;}
+
+}
+
+ #input1 {
+    width: 743px;
+    height: 48px;
+    @extend %font-input;
+    }
+
+   #input2 {
+    width: 743px;
+    height: 49px;
+    @extend %font-input;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    }
+
+    #input3 {
+    width: 743px;
+    height: 163px;
+    @extend %font-input;
+    margin-bottom: 25px;
+    }
+
+  .btn-primary  {
+  font-family: $font-logo;
+  font-size: 15.5px;
+  font-weight: 500;
+    }
+    
+
+    .footer {
+        height: 270px;
+        background-color: #13253b;
+   
+        .footer-filling {
+            @extend %size-content;
+            font-family: $font-first-content;
+            font-size: 16px;
+            font-weight: 400;
+            color: $color-logo;
+            padding-top: 127px;
+        }
+    }    
+   
+   
+
+
+       
